@@ -1,0 +1,36 @@
+body {
+    background-image: url(../images/poco_eco_site_v2_1_01.jpg);
+    background-color: #dcd6cd;
+    background-size: cover;
+    background-repeat: no-repeat;
+    color: #4a4261;
+    }
+
+h1 {
+    width: 743px;
+    height: 366px;
+    margin: 30px auto 120px auto;
+    background-image: url(../images/Logo.png);
+    background-size: cover;
+    text-indent: 100%;
+    white-space: nowrap;
+}
+
+ul {
+    display: block;
+    position: relative;
+    cursor: pointer;
+    width: 750px;
+    list-style-type: none;
+    margin: 40 -10px -10px 0;
+    padding: 0;
+}
+
+li {
+    display: inline-block;
+}
+
+section {
+    width: 750px;
+    margin: 0 auto;
+}
