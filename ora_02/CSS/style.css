@@ -1,12 +1,13 @@
 body {
-    background-image: url(../images/poco_eco_site_v2_1_01.jpg);
+    background-image: url(../images/poco_eco_site_bg.jpg);
     background-color: #dcd6cd;
     background-size: cover;
     background-repeat: no-repeat;
     color: #4a4261;
+    font-family: "Montserrat";
     }
 
-h1 {
+header {
     width: 743px;
     height: 366px;
     margin: 30px auto 120px auto;
@@ -15,6 +16,129 @@ h1 {
     text-indent: 100%;
     white-space: nowrap;
     overflow: hidden;
+    margin-bottom: 100px;
+}
+
+section {
+    width: 730px;
+    margin: 0 auto;
+    display: block;
+    padding: 0;
+}
+
+article.store {
+    margin-bottom: 140px;
+    text-align: center;
+    display: block;
+}
+
+div.casette {
+    width: 96px;
+    height: 58px;
+    position: relative;
+    display: inline-block;
+    margin-right: 95px;
+    -webkit-animation-duration: 4s;
+    -webkit-animation-iteration-count: infinite;
+    -webkit-animation-name: floatCasette;
+    -webkit-animation-timing-function: ease-in-out;
+    -webkit-play-state: running;
+}
+
+@-webkit-keyframes floatCasette{
+    from {-webkit-transform:translate(0, 0px);}
+    60% {-webkit-transform:translate(0, 10px);}
+    to {-webkit-transform: translate(0, 0px);}
+}
+
+span.casette-body {
+    width: 96px;
+    height: 58px;
+    background: #76728e;
+    position: relative;
+    display: block;
+}
+
+span.casette-inner {
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 76px;
+    height: 26px;
+    background: #362d52;
+    margin: -13px 0 0 -38px;
+    border-radius: 13px;
+}
+
+span.casette-inner::before {
+    display: block;
+    position: absolute;
+    width: 14px;
+    height: 14px;
+    top: 6px;
+    left: 6px;
+    border-radius: 7px;
+    content: '';
+    background-color: #fff;
+    z-index: 300;
+}
+
+span.casette-inner::after {
+    display: block;
+    position: absolute;
+    width: 14px;
+    height: 14px;
+    top: 6px;
+    right: 6px;
+    border-radius: 7px;
+    content: '';
+    background-color: #fff;
+    z-index: 300;
+}
+
+
+a.btn_appstore {
+    width: 201px;
+    height: 60px;
+    background: url("../images/appstore_btn.png") 0 no-repeat;
+    background-size: 201px 60px;
+    display: inline-block;
+    position: relative;
+    text-indent: 100%;
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+small {
+    margin-top: 80px;
+    display: block;
+    position: relative;
+    font-size: 16px;
+    color: #dcd6cd;
+    line-height: 24px;
+    letter-spacing: 2px;
+}
+
+article.video {
+    margin-bottom: 40px;
+}
+
+div.video-container {
+    max-width: 100%;
+    position: relative;
+    display: block;
+}
+
+iframe {
+    width: 100%;
+    height: 411px; /* fix ertek nelkul keskeny volt */
+}
+
+article.gallery {
+    margin: 0;
+    padding: 0;
+    display: block;
 }
 
 ul {
@@ -23,15 +147,12 @@ ul {
     cursor: pointer;
     width: 750px;
     list-style-type: none;
-    margin: 40 -10px -10px 0;
+    margin: 0 -10px 40px -10px;
     padding: 0;
+
 }
 
 li {
     display: inline-block;
-}
-
-section {
-    width: 750px;
-    margin: 0 auto;
+    margin: 0 5px 5px 5px;
 }
