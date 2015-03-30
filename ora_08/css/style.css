@@ -1,0 +1,163 @@
+@font-face {
+    font-family: 'montserrat';
+    src: url('../fonts/Montserrat-Light-webfont.eot');
+    src: url('../fonts/Montserrat-Light-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/Montserrat-Light-webfont.woff2') format('woff2'),
+         url('../fonts/Montserrat-Light-webfont.woff') format('woff'),
+         url('../fonts/Montserrat-Light-webfont.ttf') format('truetype');
+    font-weight: 300;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'montserrat';
+    src: url('../fonts/Montserrat-Regular-webfont.eot');
+    src: url('../fonts/Montserrat-Regular-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/Montserrat-Regular-webfont.woff2') format('woff2'),
+         url('../fonts/Montserrat-Regular-webfont.woff') format('woff'),
+         url('../fonts/Montserrat-Regular-webfont.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+body {
+    font-family: montserrat;
+    background-color: #dcd6cd;
+    background-image: -moz-linear-gradient(top,  rgba(62,49,87,1) 0%, rgba(141,115,126,1) 30%, rgba(220,214,205,1) 100%); /* FF3.6+ */
+    background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(62,49,87,1)), color-stop(30%,rgba(141,115,126,1)), color-stop(100%,rgba(220,214,205,1))); /* Chrome,Safari4+ */
+    background-image: -webkit-linear-gradient(top,  rgba(62,49,87,1) 0%,rgba(141,115,126,1) 30%,rgba(220,214,205,1) 100%); /* Chrome10+,Safari5.1+ */
+    background-image: -o-linear-gradient(top,  rgba(62,49,87,1) 0%,rgba(141,115,126,1) 30%,rgba(220,214,205,1) 100%); /* Opera 11.10+ */
+    background-image: -ms-linear-gradient(top,  rgba(62,49,87,1) 0%,rgba(141,115,126,1) 30%,rgba(220,214,205,1) 100%); /* IE10+ */
+    background-image: linear-gradient(to bottom,  rgba(62,49,87,1) 0%,rgba(141,115,126,1) 30%,rgba(220,214,205,1) 100%); /* W3C */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#3e3157', endColorstr='#dcd6cd',GradientType=0 ); /* IE6-9 */
+    background-repeat: no-repeat;
+    background-size: 100% 1000px;
+}
+
+.haromszog {
+    position: absolute;
+    left: 50%;
+    width: 213px;
+    height: 239px;
+    margin-left: -106px;
+}
+
+.h2 {
+    width: 83px;
+    height: 93px;
+    margin-left: -490px;
+    top: 430px;
+}
+
+.h3 {
+    width: 72px;
+    height: 80px;
+    margin-left: 365px;
+    top: 100px;
+}
+
+h1 {
+    width: 743px;
+    height: 366px;
+    margin: 30px auto 120px auto;
+    background-image: url(../images/logo.png);
+    background-size: cover;
+
+    /* az eredeti szöveg eltűntetéséhez */
+    /* https://css-tricks.com/examples/ImageReplacement/ */
+    text-indent: 100%;
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+
+.thumbnail-list,
+.thumbnail-list-ketto {
+    width: 980px;
+    margin: 0 auto 40px;
+    }
+
+.thumbnail-list li {
+    display: block;
+    float: left;
+    margin:0 20px 20px 0;
+}
+
+.thumbnail-list li:nth-child(4n) {
+    margin-right: 0;
+}
+
+.thumbnail-list li:nth-child(4n+1) {
+    clear: left;
+}
+
+.thumbnail-list img {
+    display: block;
+}
+
+.thumbnail-list:after {
+    content: '';
+    display: block;
+    clear: both;
+}
+
+/*thubnail-ketto*/
+
+.thumbnail-list-ketto  {
+    font-size: 0;
+    /*width: 1000px;*/
+}
+
+.thumbnail-list-ketto li {
+    display: inline-block;
+    font-size: 16px;
+    vertical-align: top;
+    margin: 10px;
+}
+
+.thumbnail-list-ketto img{
+    display: block;
+}
+
+.thumbnail-list-ketto li:nth-child(4n) {
+    margin-right: 0;
+}
+
+.thumbnail-list-ketto li:nth-child(4n+1) {
+    margin-left: 0;
+}
+
+button {
+    /*background-color: #76728e;*/
+    background: #76728e;
+    border: none;
+    /*border: 0;*/
+    color: #dcd6cd;
+    display: block;
+    font-family: montserrat;
+    font-size: 22px;
+    font-weight: 300;
+    height: 50px;
+    letter-spacing: 3px;
+    margin: 0 auto;
+    padding: 0;
+    position: relative;
+    text-transform: uppercase;
+    width: 230px;
+}
+
+button:after {
+    content:'';
+    display: block;
+    width: 0;
+    height: 0;
+    border-width: 6px 4px 0;
+    border-style: solid;
+    border-color: #76728e rgba(0, 0, 0, 0);
+    position: absolute;
+    left: 50%;
+    top: 100%;
+    margin-left: -4px;
+}
