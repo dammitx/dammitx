@@ -1,3 +1,5 @@
+/*font deklaraciok*/
+
 @font-face {
     font-family: 'montserrat';
     src: url('../fonts/Montserrat-Light-webfont.eot');
@@ -22,19 +24,25 @@
 
 }
 
+/*gradiens, es multiple bg*/
+
 body {
     font-family: montserrat;
     background-color: #dcd6cd;
-    background-image: -moz-linear-gradient(top,  rgba(62,49,87,1) 0%, rgba(141,115,126,1) 30%, rgba(220,214,205,1) 100%); /* FF3.6+ */
-    background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(62,49,87,1)), color-stop(30%,rgba(141,115,126,1)), color-stop(100%,rgba(220,214,205,1))); /* Chrome,Safari4+ */
-    background-image: -webkit-linear-gradient(top,  rgba(62,49,87,1) 0%,rgba(141,115,126,1) 30%,rgba(220,214,205,1) 100%); /* Chrome10+,Safari5.1+ */
-    background-image: -o-linear-gradient(top,  rgba(62,49,87,1) 0%,rgba(141,115,126,1) 30%,rgba(220,214,205,1) 100%); /* Opera 11.10+ */
-    background-image: -ms-linear-gradient(top,  rgba(62,49,87,1) 0%,rgba(141,115,126,1) 30%,rgba(220,214,205,1) 100%); /* IE10+ */
-    background-image: linear-gradient(to bottom,  rgba(62,49,87,1) 0%,rgba(141,115,126,1) 30%,rgba(220,214,205,1) 100%); /* W3C */
-    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#3e3157', endColorstr='#dcd6cd',GradientType=0 ); /* IE6-9 */
-    background-repeat: no-repeat;
-    background-size: 100% 1000px;
+    background-image: url(../images/haromszog.png), -moz-linear-gradient(top,  rgba(62,49,87,1) 0%, rgba(141,115,126,1) 30%, rgba(220,214,205,1) 100%); /* FF3.6+ */
+    background-image: url(../images/haromszog.png), -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(62,49,87,1)), color-stop(30%,rgba(141,115,126,1)), color-stop(100%,rgba(220,214,205,1))); /* Chrome,Safari4+ */
+    background-image: url(../images/haromszog.png), -webkit-linear-gradient(top,  rgba(62,49,87,1) 0%,rgba(141,115,126,1) 30%,rgba(220,214,205,1) 100%); /* Chrome10+,Safari5.1+ */
+    background-image: url(../images/haromszog.png), -o-linear-gradient(top,  rgba(62,49,87,1) 0%,rgba(141,115,126,1) 30%,rgba(220,214,205,1) 100%); /* Opera 11.10+ */
+    background-image: url(../images/haromszog.png), -ms-linear-gradient(top,  rgba(62,49,87,1) 0%,rgba(141,115,126,1) 30%,rgba(220,214,205,1) 100%); /* IE10+ */
+    background-image: url(../images/haromszog.png), url(../images/haromszog.png), url(../images/haromszog.png), linear-gradient(to bottom,  rgba(62,49,87,1) 0%,rgba(141,115,126,1) 30%,rgba(220,214,205,1) 100%); /* W3C */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#3e3157', endColorstr='#dcd6cd',GradientType=0 );/* IE6-9 */
+    background-repeat: no-repeat, repeat-x, repeat-x, no-repeat;
+    background-size: 300px 300px, 250px 150px, 100px 100px, 100% 1000px;
+    background-position: calc(100% - 20px) 100px, 0 4150px, 0 415px, 0 0;
+
 }
+
+/*abszolut pozicionalas*/
 
 .haromszog {
     position: absolute;
@@ -79,6 +87,8 @@ h1 {
     margin: 0 auto 40px;
     }
 
+/*float*/
+
 .thumbnail-list li {
     display: block;
     float: left;
@@ -103,7 +113,7 @@ h1 {
     clear: both;
 }
 
-/*thubnail-ketto*/
+/*thubnail-ketto inline-block*/
 
 .thumbnail-list-ketto  {
     font-size: 0;
@@ -147,7 +157,7 @@ button {
     text-transform: uppercase;
     width: 230px;
 }
-
+/*
 button:after {
     content:'';
     display: block;
@@ -160,4 +170,20 @@ button:after {
     left: 50%;
     top: 100%;
     margin-left: -4px;
+}*/
+
+li:after {
+    content: attr(valamimas);
+}
+
+ul:before {
+    content: attr(class);
+}
+
+a:after {
+    content:' [' attr(href) ']'
+}
+
+button {
+    box-shadow: 10px 20px 5px red;
 }
