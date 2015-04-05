@@ -13,14 +13,17 @@
             <form method="post" enctype="multipart/form-data">
                 <fieldset>
                     <legend>Személyes adatok</legend>
+
                     <div>
                         <label for="name-inp">Név <span>*</span></label>
                         <input type="text" id="name-inp" name="name" required />
                     </div>
+
                     <div class="half">
                         <label for="birthyear-inp">Születési éved</label>
                         <input type="text" id="birthyear-inp" name="birthyear" maxlength="4" pattern="[0-9]{4}" placeholder="pl. 1984" />
                     </div>
+
                     <div class="half gender">
                         <label>Nemed</label>
                         <label for="gender-inp-w">
@@ -32,59 +35,62 @@
                             férfi
                         </label>
                     </div>
+
                     <div>
                         <label>Milyen márkákat szeretsz?</label>
-                        <div class="half">
-                            <label for="brand-1">
-                                <input type="checkbox" id="brand-1" name="brand[]" value="adidas">
-                                Adidas
-                            </label>
-                            <label for="brand-2">
-                                <input type="checkbox" id="brand-2" name="brand[]" value="apple">
-                                Apple
-                            </label>
-                            <label for="brand-3">
-                                <input type="checkbox" id="brand-3" name="brand[]" value="cocacola">
-                                Coca-cola
-                            </label>
-                            <label for="brand-4">
-                                <input type="checkbox" id="brand-4" name="brand[]" value="mazda">
-                                Mazda
-                            </label>
-                            <label for="brand-5">
-                                <input type="checkbox" id="brand-5" name="brand[]" value="nike">
-                                Nike
-                            </label>
-                            <label for="brand-6">
-                                <input type="checkbox" id="brand-6" name="brand[]" value="opel">
-                                Opel
-                            </label>
-                        </div>
-                        <div class="half">
-                            <label for="brand-7">
-                                <input type="checkbox" id="brand-7" name="brand[]" value="adidas">
-                                Adidas
-                            </label>
-                            <label for="brand-8">
-                                <input type="checkbox" id="brand-8" name="brand[]" value="apple">
-                                Apple
-                            </label>
-                            <label for="brand-9">
-                                <input type="checkbox" id="brand-9" name="brand[]" value="cocacola">
-                                Coca-cola
-                            </label>
-                            <label for="brand-10">
-                                <input type="checkbox" id="brand-10" name="brand[]" value="mazda">
-                                Mazda
-                            </label>
-                            <label for="brand-11">
-                                <input type="checkbox" id="brand-11" name="brand[]" value="nike">
-                                Nike
-                            </label>
-                            <label for="brand-12">
-                                <input type="checkbox" id="brand-12" name="brand[]" value="opel">
-                                Opel
-                            </label>
+                        <div class="checklist">
+                            <div class="half">
+                                <label for="brand-1">
+                                    <input type="checkbox" id="brand-1" name="brand[]" value="adidas">
+                                    Adidas
+                                </label>
+                                <label for="brand-2">
+                                    <input type="checkbox" id="brand-2" name="brand[]" value="apple">
+                                    Apple
+                                </label>
+                                <label for="brand-3">
+                                    <input type="checkbox" id="brand-3" name="brand[]" value="cocacola">
+                                    Coca-cola
+                                </label>
+                                <label for="brand-4">
+                                    <input type="checkbox" id="brand-4" name="brand[]" value="mazda">
+                                    Mazda
+                                </label>
+                                <label for="brand-5">
+                                    <input type="checkbox" id="brand-5" name="brand[]" value="nike">
+                                    Nike
+                                </label>
+                                <label for="brand-6">
+                                    <input type="checkbox" id="brand-6" name="brand[]" value="opel">
+                                    Opel
+                                </label>
+                            </div>
+                            <div class="half">
+                                <label for="brand-7">
+                                    <input type="checkbox" id="brand-7" name="brand[]" value="adidas">
+                                    Adidas
+                                </label>
+                                <label for="brand-8">
+                                    <input type="checkbox" id="brand-8" name="brand[]" value="apple">
+                                    Apple
+                                </label>
+                                <label for="brand-9">
+                                    <input type="checkbox" id="brand-9" name="brand[]" value="cocacola">
+                                    Coca-cola
+                                </label>
+                                <label for="brand-10">
+                                    <input type="checkbox" id="brand-10" name="brand[]" value="mazda">
+                                    Mazda
+                                </label>
+                                <label for="brand-11">
+                                    <input type="checkbox" id="brand-11" name="brand[]" value="nike">
+                                    Nike
+                                </label>
+                                <label for="brand-12">
+                                    <input type="checkbox" id="brand-12" name="brand[]" value="opel">
+                                    Opel
+                                </label>
+                            </div>
                         </div>
                         <small>Többet is választhatsz</small>
                     </div>
@@ -135,7 +141,7 @@
                 </fieldset>
 
                 <fieldset class="wide">
-                    <div>
+                    <div class="agree">
                         <input type="hidden" name="agreement" value="0">
                         <input type="checkbox" name="agreement" id="agreement-inp" value="1">
                         <label for="agreement-inp">Elfogadom a <a href="#">felhasználási feltételeket</a> <span>*</span>
@@ -143,11 +149,11 @@
                     </div>
                 </fieldset>
                 <fieldset class="wide">
-                    <div>
-                        <input type="submit" value="Mentés" name="save">
+                    <div class="buttons">
+                        <button class="submit">Mentés</button>
                     </div>
-                    <div>
-                        <input type="reset" value="Űrlap törlése">
+                    <div class="buttons">
+                        <button class="reset" type="reset">Űrlap törlése</button>
                     </div>
                 </fieldset>
             </form>
