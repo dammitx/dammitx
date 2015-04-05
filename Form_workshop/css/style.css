@@ -297,3 +297,21 @@ label a {
     background: linear-gradient(to bottom,  rgba(224,103,103,1) 0%,rgba(198,78,78,1) 100%);
     filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#e06767', endColorstr='#c64e4e',GradientType=0 );
 }
+
+input[type="radio"] {
+    display: none;
+}
+
+.radio-label span {
+    display:inline-block;
+      width:18px;
+      height:18px;
+      vertical-align:middle;
+      cursor:pointer;
+      -moz-border-radius:  50%;
+      border-radius:  50%;
+      border: 1px solid #4a4261;
+      background-color: #ffffff;
+      margin-right: 4px;
+
+}
