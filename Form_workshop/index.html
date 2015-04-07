@@ -26,13 +26,13 @@
 
                     <div class="half gender">
                         <label>Nemed</label>
-                        <label class="radio-label" for="gender-inp-w"><span></span>
+                        <label class="radio-label" for="gender-inp-w">
                             <input type="radio" id="gender-inp-w" value="w" name="gender">
-                            nő
+                            <span></span> nő
                         </label>
-                        <label class="radio-label" for="gender-inp-m"><span></span>
-                            <input type="radio" for="gender-inp-m" value="m" name="gender">
-                            férfi
+                        <label class="radio-label" for="gender-inp-m">
+                            <input type="radio" id="gender-inp-m" value="m" name="gender">
+                            <span></span> férfi
                         </label>
                     </div>
 
@@ -141,10 +141,11 @@
                 </fieldset>
 
                 <fieldset class="wide">
-                    <div class="agree">
+                    <div>
+                        <label for="agreement-inp">
                         <input type="hidden" name="agreement" value="0">
                         <input type="checkbox" name="agreement" id="agreement-inp" value="1">
-                        <label for="agreement-inp">Elfogadom a <a href="#">felhasználási feltételeket</a> <span>*</span>
+                        Elfogadom a <a href="#">felhasználási feltételeket</a> <span>*</span>
                         </label>
                     </div>
                 </fieldset>
