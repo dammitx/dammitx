@@ -1,0 +1,32 @@
+input[type=text]:focus {
+    outline: 5px solid red;
+    background-color: yellow;
+}
+
+input[type=text]:invalid {
+    background-color: red;
+}
+
+input[type=checkbox] {
+    float: left;
+}
+
+.fake-checkbox {
+    float: left;
+    width: 15px;
+    height: 15px;
+    background-color: pink;
+    border: 2px solid black;
+    margin-left: -20px;
+
+}
+
+input:checked + .fake-checkbox {
+    background: green;
+    text-align: center;
+    line-height: 20px;
+}
+input:checked + .fake-checkbox:before {
+    content: 'X';
+    color: white;
+}
