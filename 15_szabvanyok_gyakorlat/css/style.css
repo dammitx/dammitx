@@ -1,32 +1,41 @@
 body {
-    background: #e4e4e4;
-	color: #000;
-	font-family: arial, sans-serif;
-	font-size: 14px;
-	font-weight: 400;
+  background: #e4e4e4;
+  color: #000;
+  font-family: arial, sans-serif;
+  font-size: 14px;
 }
 
+a {
+  color: #000;
+  text-decoration: none;
+}
 
-p {
-    line-height: 20px;
+/* clearfixz */
+.clearfix:before,
+.clearfix:after {
+	content: "";
+	display: table;
+}
+
+.clearfix:after {
+    clear: both;
+}
+
+.clearfix {
+  *zoom: 1;
 }
 
 /*header*/
 
-
 .header {
-    padding: 30px 0;
-}
-
-.header, nav {
     background: #898989;
-    width: 100%;
 }
 
-.middle {
-    box-sizing: border-box;
-    margin: 0 auto;
-    width: 1000px;
+.header > h1 {
+  line-height: 130px;
+  margin: 0 auto;
+  width: 960px;
+  height: 130px;
 }
 
 .title {
@@ -37,86 +46,197 @@ p {
     margin-left: 20px;
 }
 
-nav {
+/* header-navigation */
+
+.header-menu {
     background: #aaa;
     border-top: 1px solid #555;
     border-bottom: 1px solid #555;
     height: 40px;
     line-height: 40px;
+}
 
+.menu {
+  margin: 0 auto;
+  width: 1000px;
 }
 
 .nav {
-    float: left;
-    margin-top: 0;
-    margin-bottom: 0;
-    padding-left: 20px;
-}
-
-.social {
-    float: right;
-    margin-top: 0;
-    margin-bottom: 0;
-}
-
-.nav li, .social li {
-    display: block;
-    float: left;
+  float: left;
 }
 
 .nav ul {
-    padding: 20px;
-    margin-top: 0;
-    margin-bottom: 0;
+  margin: 0;
+  padding: 0;
 }
 
-/*content*/
+.nav li {
+  border-right: 1px solid #000;
+  float: left;
+  list-style-type: none;
+}
 
+.nav li:first-child {
+  border-left: 1px solid #000;
+}
+
+.nav a {
+  color: #000;
+  display: block;
+  padding: 0 15px;
+  text-decoration: none;
+}
+
+/* header-social */
+
+.social {
+  float: right;
+  margin: 0 10px 0 0;
+}
+
+.social li {
+  float: left;
+  list-style-type: none;
+  margin-right: 10px;
+}
+
+/*.social a {
+  color: #000;
+  text-decoration: none;
+}*/
+
+/* content */
 .wrapper {
-    background: #fff;
-    margin: 0 auto;
-    padding: 40px 20px 30px 20px;
+  background-color: #fff;
+  margin: 0 auto;
+  padding: 40px 40px 30px 20px;
+  width: 940px;
 }
 
-main {
-	float: right;
-	width: 680px;
-	padding-right: 20px;
-	box-sizing: border-box;
-}
-aside {
-	width: 230px;
-	float: left;
-	background: #e9ebf4;
-	padding: 10px;
-	box-sizing: border-box;
-}
-.clearfix:after {
-	content: "";
-	clear: both;
-	display: table;
+.articles {
+  float: right;
+  width: 680px;
 }
 
-article h1 {
-    font-size: 24px;
+.article-list {
+  list-style-type: none;
+  margin: 0 0 20px;
+  padding: 0;
 }
 
-.sidebar h1 {
-    font-size: 18px;
+.article-list > li {
+  border-bottom: 1px solid #e9ebf4;
+  padding-bottom: 20px;
 }
 
-
-.sidebar li {
-    list-style-type: none;
-    line-height: 20px;
+.article-title {
+  font-size: 24px;
+  line-height: 17px;
 }
 
-.sidebar ul {
-    padding: 0;
+.article-meta {
+  font-size: 12px;
+}
+
+.article-tag {
+  display: inline-block;
+  list-style-type: none;
+  padding: 0;
+}
+
+.article-tag li {
+  display: inline-block;
 }
 
 img {
-    float: right;
-    margin-left: 10px;
-    border: 5px solid #e9ebf4;
+  border: 5px solid #e9ebf4;
+  float: right;
+  margin: 0 0 10px 20px;
+}
+
+.article-comments a {
+  background: #e9ebf4;
+  border-radius: 2px;
+  color: #667a9d;
+  display: block;
+  font-weight: bold;
+  height: 26px;
+  line-height: 26px;
+  text-align: center;
+  width: 111px;
+}
+
+/*.prev {
+  float: left;
+  border-radius: 2px;
+  background-color: #ececec;
+}*/
+
+.prev a {
+  background-color: #ececec;
+  float: left;
+  border-radius: 2px;
+  color: rgba(0, 0, 0, .5);
+  display: block;
+  height: 25px;
+  width: 70px;
+  line-height: 25px;
+  text-align: center;
+
+}
+
+.next a {
+  float: right;
+  background-color: #e3e5ef;
+  border-radius: 2px;
+  color: #000;
+  display: block;
+  height: 25px;
+  width: 100px;
+  line-height: 25px;
+  text-align: center;
+}
+
+/*.prev{
+  border-radius: 2px;
+  display: block;
+  line-height: 16px;
+  padding: 0 10px;
+}*/
+
+.sidebar {
+  background-color: #e9ebf4;
+  float: left;
+  padding: 10px;
+  width: 210px;
+}
+/**/
+.sidebar section {
+  margin: 20px 0;
+}
+
+.sidebar section:first-child {
+  margin-top: 0;
+}
+
+.sidebar h1 {
+  font-size: 18px;
+  line-height: 34px;
+  margin: 0 0 5px;
+}
+.sidebar p {
+  margin: 0;
+  line-height: 20px;
+}
+.sidebar ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.sidebar li {
+  margin: 5px 0;
+}
+.sidebar a {
+  color: #2c4879;
+  text-decoration: underline;
 }
